@@ -24,7 +24,7 @@ def main():
     # 2) Call o3-pro and include the uploaded file as an input part
     resp = client.responses.create(
         model="o3-pro",
-        reasoning={"effort": "medium"},  # let o3-pro think a bit; adjust to "high" for tougher tasks
+        reasoning={"effort": "high"},  # let o3-pro think a bit; adjust to "high" for tougher tasks
         input=[
             {
                 "role": "user",

@@ -53,7 +53,7 @@ def analyze_files_with_o3_pro(file_paths, custom_prompt=None):
         # 3) Call o3-pro and include all uploaded files as input parts
         resp = client.responses.create(
             model="o3-pro",
-            reasoning={"effort": "medium"},  # let o3-pro think a bit; adjust to "high" for tougher tasks
+            reasoning={"effort": "high"},  # let o3-pro think a bit; adjust to "high" for tougher tasks
             input=[
                 {
                     "role": "user",

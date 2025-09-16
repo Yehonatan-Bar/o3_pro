@@ -44,7 +44,7 @@ def test_o3_pro():
         print("🤖 Calling o3-pro...")
         resp = client.responses.create(
             model="o3-pro",
-            reasoning={"effort": "medium"},
+            reasoning={"effort": "high"},
             input=[{
                 "role": "user",
                 "content": [
