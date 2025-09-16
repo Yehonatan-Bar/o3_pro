@@ -1,0 +1,9 @@
+This is a test document for the Flask file analyzer application.
+
+The application should be able to:
+1. Upload and process text files
+2. Use the Anthropic Claude API to analyze content
+3. Return a summary with key takeaways
+4. Handle custom prompts from users
+
+This document contains information about web development, API integration, and file processing in Python Flask applications.
