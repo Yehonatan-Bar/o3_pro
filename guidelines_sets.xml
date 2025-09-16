@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guidelines_structure>
+    <sets>
+        <!-- Compliance Guidelines Set -->
+        <set id="compliance_set" name="Compliance Guidelines" description="Guidelines for regulatory and policy compliance verification">
+            <guidelines>
+                <guideline id="gdpr_compliance" title="GDPR Compliance" />
+                <guideline id="data_retention_policy" title="Data Retention Policy" />
+                <guideline id="security_measures" title="Security Measures Documentation" />
+                <guideline id="privacy_policy" title="Privacy Policy Requirements" />
+                <guideline id="consent_management" title="Consent Management" />
+                <guideline id="data_breach_procedures" title="Data Breach Response Procedures" />
+            </guidelines>
+        </set>
+
+        <!-- Technical Guidelines Set -->
+        <set id="technical_set" name="Technical Guidelines" description="Guidelines for technical documentation and implementation standards">
+            <guidelines>
+                <guideline id="api_documentation" title="API Documentation Standards" />
+                <guideline id="system_requirements" title="System Requirements Specification" />
+                <guideline id="architecture_design" title="Architecture Design Documentation" />
+                <guideline id="code_quality" title="Code Quality Standards" />
+                <guideline id="testing_procedures" title="Testing Procedures Documentation" />
+                <guideline id="deployment_guide" title="Deployment Guide Completeness" />
+            </guidelines>
+        </set>
+
+        <!-- Quality Assurance Guidelines Set -->
+        <set id="qa_set" name="Quality Assurance Guidelines" description="Guidelines for quality control and assurance processes">
+            <guidelines>
+                <guideline id="review_process" title="Review Process Documentation" />
+                <guideline id="quality_metrics" title="Quality Metrics Definition" />
+                <guideline id="acceptance_criteria" title="Acceptance Criteria Clarity" />
+                <guideline id="test_coverage" title="Test Coverage Requirements" />
+                <guideline id="bug_tracking" title="Bug Tracking Procedures" />
+            </guidelines>
+        </set>
+
+        <!-- Documentation Guidelines Set -->
+        <set id="documentation_set" name="Documentation Guidelines" description="Guidelines for documentation standards and completeness">
+            <guidelines>
+                <guideline id="user_manual" title="User Manual Completeness" />
+                <guideline id="installation_guide" title="Installation Guide Accuracy" />
+                <guideline id="troubleshooting" title="Troubleshooting Section" />
+                <guideline id="version_history" title="Version History Documentation" />
+                <guideline id="glossary_terms" title="Glossary and Terminology" />
+            </guidelines>
+        </set>
+
+        <!-- Israeli Stairs Building Regulations Set -->
+        <set id="israeli_stairs_regulations" name="תקנות תכנון ובניה - מדרגות" description="הנחיות לעמידה בתקנות הבניה הישראליות למדרגות, חדרי מדרגות ומדרגות נעות">
+            <guidelines>
+                <guideline id="stairs_width_compliance" title="רוחב של מדרגות">
+                    <regulation_text>רוחב של מדרגות תק' (מס' 3) תשס"ח2008- ת"ט תשס"ט2008-
+3.2.2.2 רוחבן של מדרגות בבניין יהיה 1.10 מטרים לפחות; ואולם –
+(1) בתוך דירה – רוחבן של מדרגות יהיה 0.80 מטרים לפחות;
+(2) בתוך בניין מגורים המכיל עד 2 דירות – רוחבן של המדרגות המשותפות יהיה 0.90 מטרים לפחות;
+(3) בבניין שאינו גבוה או רב-קומות, רוחבן של המדרגות המשותפות יהיה 1.00 מטרים לפחות.
+אופן מדידת רוחב המדרגות תק' (מס' 3) תשס"ח2008-
+3.2.2.3 רוחבן של מדרגות יימדד בהתאם לתנאים האלה:
+(1) תחומות המדרגות בין שני קירות ומשני צדיהן מותקנים מסעדים, יימדד הרוחב בין מישורי הציפוי של
+הקירות, בתנאי שהמסעד לא יבלוט יותר מ9- סנטימטרים ממישור הציפוי כמתואר בתרשים 3.2.2.3 א'; אם
+בליטת המסעד גדולה מ9- סנטימטרים, יימדד הרוחב מציר המסעד כמתואר בתרשים 3.2.2.3 ב';
+(2) ניצב קיר בצדן האחד של המדרגות ומעקה בצדן האחר, יימדד הרוחב בין מישור ציפוי הקיר שבו המסעד
+שאינו בולט יותר מ9- סנטימטרים ובין ציר בית האחיזה של המעקה, ובלבד שציר בית אחיזה כאמור לא יבלוט
+יותר מ7- סנטימטרים כלפי חוץ מקצה שטח המדרגות החופשי לדריכה כמתואר בתרשים 3.2.2.3 ג'; אם
+בליטת המסעד גדולה מ9- סנטימטרים, יימדד הרוחב בין צידי שני המסעדים כמתואר בתרשים 3.2.2.3 ד';
+(3) אם ניצבים מעקים בשני צדי המדרגות, יימדד הרוחב בין הצירים של שני בתי האחיזה של המעקים,
+ובלבד שהצירים האמורים לא יבלטו יותר מ7- סנטימטרים כלפי חוץ כאמור בפסקה (2) כמתואר בתרשים
+3.2.2.3 ה';
+(4) בולט ציר אחיזה של מעקה יותר מ7- סנטימטרים כלפי חוץ, כאמור בפסקה (2) או (3), יימדד הרוחב בין
+מישור הציפוי של הקיר ובין קצה שטח המדרגה החופשי לדריכה או בין שני קצות שטח המדרגה החופשי
+לדריכה, לפי העניין כמתואר בתרשימים 3.2.2.3 ו' ו3.2.2.3- ז'.</regulation_text>
+                </guideline>
+
+                <guideline id="headroom_height_compliance" title="גובה מזקף ראש מעל מדרגות">
+                    <regulation_text>גובה מזקף ראש מעל מדרגות תק' (מס' 3) תשס"ח2008-
+3.2.2.4 גובה מזקף ראש מעל מדרגות יהיה 2.10 מטרים לפחות כאשר הוא נמדד אנכית מעל מישור
+המקביל למשיק אפי המדרגות כמתואר בתרשים .3.2.2.4</regulation_text>
+                </guideline>
+
+                <guideline id="step_rise_tread_dimensions" title="מידות רום ושלח מדרגה">
+                    <regulation_text>מידות רום ושלח מדרגה תק' (מס' 3) תשס"ח2008-
+3.2.2.5 (א) רום המדרגה יהיה 10 סנטימטרים לפחות ולא יעלה על 17.5 סנטימטרים.
+ (ב) שלח המדרגה יהיה 26 סנטימטרים לפחות כמתואר בתרשים .3.2.2.5
+ (ג) על אף האמור בפרטי משנה (א) ו-(ב), בבניין ציבורי שלא מותקנת בו מעלית, רום המדרגה לא
+יעלה על 16.5 סנטימטרים, ושלח המדרגה יהיה 28 סנטימטרים לפחות.
+ (ד) במהלך מדרגות אחד, לכל אורכו, יהיה גודל אחיד לרום המדרגה וגודל אחיד לשלחה, והיחס
+ביניהם יהיה לפי הנוסחה: 2 רומים + שלח = 61 סנטימטרים עד 63 סנטימטרים.
+ (ה) המידות הנקובות בפרט זה חלות על כל המדרגות, זולת אם נאמר אחרת בתקנות אלה ובסטיות
+הביצוע המותרות בפרט .3.2.2.13</regulation_text>
+                </guideline>
+
+                <guideline id="step_count_per_flight" title="מספר המדרגות במהלך אחד">
+                    <regulation_text>מספר המדרגות במהלך אחד תק' (מס' 3) תשס"ח2008-
+3.2.2.6 (א) במהלך מדרגות אחד בתוך הבניין, לרבות מהלך מדרגות אחד בתוך חדר מדרגות, מספר
+המדרגות יהיה 3 לפחות ולא יעלה על 16; ואולם אפשר שמהלך מדרגות אחד יכלול עד 22 מדרגות, בתנאי
+שהרום לא יעלה על 15.5 סנטימטרים.
+ (ב) על דירה בבניין מגורים יחול פרט .3.8.5.2</regulation_text>
+                </guideline>
+
+                <guideline id="fire_resistance_materials" title="עמידות אש של מדרגות וכבשים">
+                    <regulation_text>עמידות אש של מדרגות וכבשים תק' (מס' 3) תשס"ח2008-
+3.2.2.9 כל מדרגה, משטח ביניים או כבש בבניין יהיו מחומרים לא דליקים, למעט חיפוי לרכיבים אלה שעוביו
+אינו עולה על 16 מ"מ ולמעט שלח, רום, פודסט או כבש עשויים עץ שהעובי שלהם הוא 4.5 סנטימטרים
+לפחות.</regulation_text>
+                </guideline>
+
+                <guideline id="horizontal_platform_requirements" title="משטח אופקי בחדר מדרגות">
+                    <regulation_text>משטח אופקי בחדר מדרגות תק' (מס' 3) תשס"ח2008-
+3.2.2.10 במשטח אופקי (פודסט) בחדר מדרגות ובמהלך מדרגות יתקיימו הדרישות אלה:
+(1) רוחב המעבר החופשי במשטח אופקי (פודסט) המשמש לשינוי כיוון התנועה בחדר מדרגות או במהלך
+מדרגות יהיה לפחות ברוחב מינימלי הנדרש של המדרגות כמתואר בתרשימים 3.2.2.10 א' ו3.2.2.10- ב';
+(2) העומק של משטח אופקי בין שני מהלכי מדרגות הנמשכים בכיוון אחד יהיה 1.20 מטרים לפחות; בפסקה
+זה, "עומק" – המרחק האופקי בין סיפי שתי המדרגות הגובלות עם המשטח האופקי, כמתואר בתרשים
+3.2.2.10 ג';
+(3) העומק של משטח אופקי בין קצה מהלך מדרגות ואגף דלת הנמשכים בכיוון אחד יהיה 1.0 מטר לפחות;
+בפסקה זו, "עומק" – המרחק האופקי בין סף המדרגה לבין אגף הדלת הגובלת עם המשטח האופקי, כמתואר
+בתרשים 3.2.2.10 ד';
+(4) אם דלת נפתחת אל מהלך מדרגות או חדר מדרגות או מהם, ייבנה משטח אופקי משני צדי אגף הדלת;
+עומק המשטח האופקי נמדד מפני הדלת ובניצב לה כמתואר בתרשים 3.2.2.10 ה'.</regulation_text>
+                </guideline>
+
+                <guideline id="nose_overhang_angle_compliance" title="אף המדרגה וזווית הרום">
+                    <regulation_text>אף המדרגה וזווית הרום תק' (מס' 3) תשס"ח2008-
+3.2.2.11 עומק אף המדרגה לא יעלה על 4 סנטימטרים; זווית השיפוט של רום המדרגה לא תפחת מ60-
+מעלות.</regulation_text>
+                </guideline>
+
+                <guideline id="handrail_guardrail_requirements" title="מעקה, מסעד ובית אחיזה">
+                    <regulation_text>בית אחיזה ומעקה במהלך ובחדר מדרגות תק' (מס' 3) תשס"ח2008-
+3.2.2.15 בכל מהלך מדרגות המכיל 3 מדרגות או יותר, יותקן בית אחיזה משני צדי המדרגות; כאשר נדרש
+מעקה, יראו את בית האחיזה של המעקה כמתאים לדרישות פרט זה.
+בית אחיזה נוסף תק' (מס' 3) תשס"ח2008-
+3.2.2.16 (א) בחדר מדרגות או במהלך מדרגות, בתחום רוחב המדרגה הנדרש למילוט, המרחק אל בית
+אחיזה לא יעלה על 75 ס"מ כמתואר בתרשימים 3.2.2.16 א' ו3.2.2.16- ב'.
+ (ב) על אף האמור בפרט משנה (א), עלה המרחק אל בית האחיזה, בתחום רוחב המדרגה הנדרש
+למילוט, על 75 ס"מ, יותקן מאחז יד נוסף כמתואר בתרשים 3.2.2.16 ג'.
+מעקה, מסעד ובית אחיזה תק' (מס' 3) תשס"ח2008-
+3.2.2.17 במעקה, במסעד ובבית אחיזה יתקיימו דרישות ת"י 1142 זולת אם נאמר אחרת בחלק זה.</regulation_text>
+                </guideline>
+
+                <guideline id="dimensional_tolerance_compliance" title="סטיה מותרת באחידות מידות המדרגות">
+                    <regulation_text>סטיה מותרת באחידות מידות המדרגות תק' (מס' 3) תשס"ח2008-
+3.2.2.13 במדרגות במהלך אחד, המשמשות חלק מדרך מוצא לא תותר סטייה העולה על 5 מ"מ בעומק
+השלח או בגובה הרום, בין מדרגות סמוכות, וסטייה העולה על 10 מ"מ בעומק השלח או בגובה הרום, בין
+המדרגה אשר מידתה היא הגדולה ביותר לבין המדרגה אשר מידתה היא הקטנה ביותר.</regulation_text>
+                </guideline>
+
+                <guideline id="slope_drainage_requirements" title="שיפוע השלח">
+                    <regulation_text>שיפוע השלח תק' (מס' 3) תשס"ח2008-
+3.2.2.12 במדרגות חיצוניות, שיפוע השלח לצורך ניקוז מים, לא יעלה על 2% בכיוון הירידה, ועל %1/2 בניצב
+לכיוון הירידה.</regulation_text>
+                </guideline>
+            </guidelines>
+        </set>
+    </sets>
+</guidelines_structure>

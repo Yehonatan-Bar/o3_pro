@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prompt_library>
+    <!-- General Analysis Prompt -->
+    <general_analysis_prompt>
+        <system_prompt> המשימה שלך היא לאשר קיום של הנחיה מסויימת במסמך מסויים, עליך לקרוא את ההנחיה, לראות את הסרטוט, ולהגיב באחת משלושת הדרכים: כן (אם ההנחיה מתקיימת), לא (אם ההנחיה לא מתקיימת), לא ידוע (אם אין במסמך מידע מידע מתאים)  </system_prompt>
+        <general_analysis>  עיין במסמך וכתוב פרוט מסודר של כל הנתונים שאתה יכול להפיק מהמסך. כתוב רק את הנתונים שניתן להפיק בוודאות ובבירור מתוך המסמך. בדוק היטב את הנתונים והתעלם מנתונים שלא ברורים לחלוטין. </general_analysis>       
+    </general_analysis_prompt>
+
+<connecting_words>
+    <before_guideline>
+        זאת ההנחיה שצריך לבדוק:
+    </before_guideline>
+    <after_guideline>
+        עד כאן ההנחיה
+    </after_guideline>
+</connecting_words>
+
+
+    <!-- Guidelines Sets -->
+    
+        <set  id="israeli_stairs_regulations" name="תקנות תכנון ובניה - מדרגות" >
+            <set_prompt>
+                
+            </set_prompt>
+
+        </set>
+    </guidelines_sets>
+</prompt_library>

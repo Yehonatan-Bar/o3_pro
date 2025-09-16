@@ -50,6 +50,14 @@
             white-space: pre-wrap;
             font-size: 16px;
         }
+        .file-list {
+            margin: 10px 0;
+        }
+        .file-item {
+            padding: 4px 0;
+            font-size: 14px;
+            color: #495057;
+        }
         .back-btn {
             display: inline-block;
             background: #007bff;
@@ -97,7 +105,16 @@
 
         <div class="file-info">
             <h3>📁 File Information</h3>
-            <p><strong>Filename:</strong> {{ filename }}</p>
+            {% if file_count > 1 %}
+                <p><strong>Files Analyzed:</strong> {{ file_count }} PDF files</p>
+                <div class="file-list">
+                    {% for filename in filenames %}
+                        <div class="file-item">📄 {{ filename }}</div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p><strong>Filename:</strong> {{ filenames[0] if filenames else 'Unknown file' }}</p>
+            {% endif %}
         </div>
 
         <div class="prompt-used">
@@ -112,7 +129,7 @@
             <div id="analysisText">{{ analysis }}</div>
         </div>
 
-        <a href="{{ url_for('index') }}" class="back-btn">⬅️ Analyze Another File</a>
+        <a href="{{ url_for('index') }}" class="back-btn">⬅️ Analyze More Files</a>
     </div>
 
     <script>

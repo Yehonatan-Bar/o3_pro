@@ -44,6 +44,24 @@
             width: 100%;
             max-width: 400px;
         }
+        .file-info {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #495057;
+            display: none;
+        }
+        .file-info.show {
+            display: block;
+        }
+        .file-list {
+            margin: 5px 0;
+        }
+        .file-item {
+            padding: 2px 0;
+        }
         .prompt-input {
             width: 100%;
             margin: 20px 0;
@@ -124,9 +142,10 @@
 
         <form action="/upload" method="post" enctype="multipart/form-data" id="uploadForm">
             <div class="upload-form">
-                <h3>📁 Select a file to analyze</h3>
+                <h3>📁 Select PDF files to analyze</h3>
                 <div class="file-input">
-                    <input type="file" name="file" id="file" required accept=".txt,.pdf,.png,.jpg,.jpeg,.gif,.doc,.docx,.csv,.json,.xml,.md">
+                    <input type="file" name="files" id="files" required accept=".pdf" multiple>
+                    <div class="file-info" id="fileInfo"></div>
                 </div>
 
                 <div class="prompt-input">
@@ -134,7 +153,7 @@
                     <textarea name="prompt" id="prompt" placeholder="Enter your custom prompt here, or leave blank for default analysis (summary with three key takeaways)"></textarea>
                 </div>
 
-                <button type="submit" class="submit-btn">🔍 Analyze File</button>
+                <button type="submit" class="submit-btn" id="submitBtn">🔍 Analyze Files</button>
             </div>
         </form>
 
@@ -144,16 +163,50 @@
         </div>
 
         <div class="supported-formats">
-            <strong>Supported file formats:</strong>
-            <br>Text files: .txt, .md, .csv, .json, .xml
-            <br>Documents: .pdf, .doc, .docx
-            <br>Images: .png, .jpg, .jpeg, .gif
+            <strong>Supported file format:</strong> PDF files only
             <br><br>
-            <em>Note: Currently optimized for text-based files. PDF and image analysis may have limited functionality.</em>
+            <em>You can select multiple PDF files at once for combined analysis.</em>
         </div>
     </div>
 
     <script>
+        const fileInput = document.getElementById('files');
+        const fileInfo = document.getElementById('fileInfo');
+        const submitBtn = document.getElementById('submitBtn');
+
+        fileInput.addEventListener('change', function() {
+            const files = Array.from(this.files);
+            if (files.length === 0) {
+                fileInfo.classList.remove('show');
+                submitBtn.textContent = '🔍 Analyze Files';
+                return;
+            }
+
+            const pdfFiles = files.filter(file => file.name.toLowerCase().endsWith('.pdf'));
+
+            if (pdfFiles.length === 0) {
+                fileInfo.innerHTML = '<strong style="color: #dc3545;">⚠️ No PDF files selected. Please select PDF files only.</strong>';
+                fileInfo.classList.add('show');
+                submitBtn.textContent = '🔍 Analyze Files';
+                return;
+            }
+
+            let html = `<strong>Selected ${pdfFiles.length} PDF file${pdfFiles.length === 1 ? '' : 's'}:</strong><div class="file-list">`;
+            pdfFiles.forEach((file, index) => {
+                const sizeKB = (file.size / 1024).toFixed(1);
+                html += `<div class="file-item">📄 ${file.name} (${sizeKB} KB)</div>`;
+            });
+            html += '</div>';
+
+            if (files.length > pdfFiles.length) {
+                html += `<div style="color: #dc3545; margin-top: 5px;">⚠️ ${files.length - pdfFiles.length} non-PDF file${files.length - pdfFiles.length === 1 ? '' : 's'} will be ignored.</div>`;
+            }
+
+            fileInfo.innerHTML = html;
+            fileInfo.classList.add('show');
+            submitBtn.textContent = `🔍 Analyze ${pdfFiles.length} File${pdfFiles.length === 1 ? '' : 's'}`;
+        });
+
         document.getElementById('uploadForm').addEventListener('submit', function() {
             document.querySelector('.upload-form').style.display = 'none';
             document.getElementById('loading').style.display = 'block';
