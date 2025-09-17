@@ -447,6 +447,13 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
                         result_value = json_obj.get('result', -1)
                         explanation = json_obj.get('explanation', '')
 
+                        # Extract new fields from JSON response
+                        status = json_obj.get('status', '')
+                        status_detail = json_obj.get('status_detail', '')
+                        category = json_obj.get('category', '')
+                        issue_number = json_obj.get('issue_number', '')
+                        severity = json_obj.get('severity', '')
+
                         if result_value == 1:
                             compliance_status = "כן"
                         elif result_value == 0:
@@ -454,7 +461,7 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
                         else:
                             compliance_status = "Unknown"
 
-                        logger.info(f"Mock response parsed: {compliance_status}, result_value: {result_value}")
+                        logger.info(f"Mock response parsed: {compliance_status}, result_value: {result_value}, status: {status}")
                 except Exception as e:
                     logger.warning(f"Could not parse mock JSON: {e}")
                     # Fallback: try to extract explanation from JSON manually
@@ -486,7 +493,7 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
                 if not explanation:
                     explanation = "אירעה שגיאה בעיבוד התגובה"
 
-                # Return mock result
+                # Return mock result with new fields
                 return {
                     'guideline_id': guideline['id'],
                     'title': guideline['title'],
@@ -494,6 +501,11 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
                     'analysis': explanation,  # Always use explanation, never full JSON
                     'explanation': explanation,
                     'regulation_text': guideline['regulation_text'],
+                    'status': locals().get('status', ''),
+                    'status_detail': locals().get('status_detail', ''),
+                    'category': locals().get('category', ''),
+                    'issue_number': locals().get('issue_number', ''),
+                    'severity': locals().get('severity', ''),
                     'processing_time': time.time(),
                     'completed_at': datetime.now().isoformat()
                 }
@@ -624,6 +636,12 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
             explanation = result_text  # Default to full text
 
             # Try to parse JSON response first (same logic as mock processing)
+            status = ""
+            status_detail = ""
+            category = ""
+            issue_number = ""
+            severity = ""
+
             try:
                 import re
                 json_start = result_text.find('{')
@@ -634,6 +652,13 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
                     json_obj = json.loads(json_str)
                     result_value = json_obj.get('result', -1)
                     extracted_explanation = json_obj.get('explanation', '')
+
+                    # Extract new fields from JSON response
+                    status = json_obj.get('status', '')
+                    status_detail = json_obj.get('status_detail', '')
+                    category = json_obj.get('category', '')
+                    issue_number = json_obj.get('issue_number', '')
+                    severity = json_obj.get('severity', '')
 
                     if result_value == 1:
                         compliance_status = "כן"
@@ -646,7 +671,7 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
                     if extracted_explanation:
                         explanation = extracted_explanation
 
-                    logger.info(f"Real API response parsed: {compliance_status}, result_value: {result_value}")
+                    logger.info(f"Real API response parsed: {compliance_status}, result_value: {result_value}, status: {status}")
                 else:
                     # Fallback to text-based search
                     if "כן" in result_text:
@@ -670,6 +695,11 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
                 'compliance_status': compliance_status,
                 'analysis': explanation,  # Use explanation instead of full result_text
                 'regulation_text': guideline['regulation_text'],
+                'status': status,
+                'status_detail': status_detail,
+                'category': category,
+                'issue_number': issue_number,
+                'severity': severity,
                 'processing_time': time.time(),
                 'completed_at': datetime.now().isoformat()
             }

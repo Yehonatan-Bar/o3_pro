@@ -1339,3 +1339,186 @@
 2025-09-17 12:33:41,896 - __main__ - INFO - Successfully completed processing for job 980f30ca-a320-4c79-bb4d-482dab5e5b85
 2025-09-17 12:33:44,741 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 12:33:44] "GET /api/status/980f30ca-a320-4c79-bb4d-482dab5e5b85 HTTP/1.1" 200 -
 2025-09-17 12:33:46,419 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 12:33:46] "GET /result/980f30ca-a320-4c79-bb4d-482dab5e5b85 HTTP/1.1" 200 -
+2025-09-17 14:44:35,218 - __main__ - INFO - 🌐 LIVE MODE - Making real API calls
+2025-09-17 14:44:35,218 - __main__ - INFO - Loading persisted jobs from disk...
+2025-09-17 14:44:35,219 - __main__ - INFO - Recovered job 10fd2b8f-7350-464f-bcab-6d2cd50b549c with status: processing
+2025-09-17 14:44:35,221 - __main__ - INFO - Recovered job 2a3b495f-fb5b-45a8-a37a-02fc615ce7bd with status: completed
+2025-09-17 14:44:35,222 - __main__ - INFO - Recovered job e798b21b-bc61-4429-b072-912a2688e604 with status: completed
+2025-09-17 14:44:35,225 - __main__ - INFO - Recovered job f52c95b5-0e33-4a2b-a04f-89fa5195ef25 with status: completed
+2025-09-17 14:44:35,227 - __main__ - INFO - Recovered job f1378324-415d-41ac-a569-b42ddad366c3 with status: processing
+2025-09-17 14:44:35,227 - __main__ - INFO - Recovered job 980f30ca-a320-4c79-bb4d-482dab5e5b85 with status: completed
+2025-09-17 14:44:35,230 - __main__ - INFO - Recovered job 5e1b5cff-cba2-4480-84ba-e15d67c0e5ce with status: completed
+2025-09-17 14:44:35,230 - __main__ - INFO - Recovered job 9a02a945-7224-4c44-b3c3-c351fd83eed7 with status: processing
+2025-09-17 14:44:35,233 - __main__ - INFO - Recovered job b27a31d3-5bbd-45b6-baaf-7961269885f9 with status: completed
+2025-09-17 14:44:35,235 - __main__ - INFO - Recovered job 48702fda-4eb5-45a5-a562-2858933e70fa with status: completed
+2025-09-17 14:44:35,237 - __main__ - INFO - Recovered job 382ffe54-61c2-4f26-9194-6e11e1c90c78 with status: completed
+2025-09-17 14:44:35,241 - __main__ - INFO - Recovered job e225a67c-00ae-4b09-bfef-4d3a71f53f15 with status: completed
+2025-09-17 14:44:35,242 - __main__ - INFO - Recovered job 64bb2c6a-4b6c-43ad-ad37-70c37fe1e6c9 with status: completed
+2025-09-17 14:44:35,243 - __main__ - INFO - Recovered job 0f6781f8-83b3-43d5-9577-af2c01e1bd73 with status: completed
+2025-09-17 14:44:35,244 - __main__ - ERROR - Error loading job status for eff2ba5b-123a-4188-9f75-ef693249c35c: Expecting value: line 1 column 1 (char 0)
+2025-09-17 14:44:35,244 - __main__ - INFO - Recovered job 869960e2-f693-42d3-b97f-6ef75019afc9 with status: completed
+2025-09-17 14:44:35,245 - __main__ - INFO - Recovered job ff56d7c5-73fc-4f89-9c19-af2dce9afbbb with status: processing
+2025-09-17 14:44:35,246 - __main__ - INFO - Recovered job 7078aa63-a0df-4d11-9136-769c6a022519 with status: completed
+2025-09-17 14:44:35,261 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.0.15.149:9000
+2025-09-17 14:44:35,261 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-17 14:44:35,262 - werkzeug - INFO -  * Restarting with stat
+2025-09-17 14:44:35,755 - __main__ - INFO - 🌐 LIVE MODE - Making real API calls
+2025-09-17 14:44:35,756 - __main__ - INFO - Loading persisted jobs from disk...
+2025-09-17 14:44:35,756 - __main__ - INFO - Recovered job 10fd2b8f-7350-464f-bcab-6d2cd50b549c with status: processing
+2025-09-17 14:44:35,756 - __main__ - INFO - Recovered job 2a3b495f-fb5b-45a8-a37a-02fc615ce7bd with status: completed
+2025-09-17 14:44:35,756 - __main__ - INFO - Recovered job e798b21b-bc61-4429-b072-912a2688e604 with status: completed
+2025-09-17 14:44:35,757 - __main__ - INFO - Recovered job f52c95b5-0e33-4a2b-a04f-89fa5195ef25 with status: completed
+2025-09-17 14:44:35,757 - __main__ - INFO - Recovered job f1378324-415d-41ac-a569-b42ddad366c3 with status: processing
+2025-09-17 14:44:35,757 - __main__ - INFO - Recovered job 980f30ca-a320-4c79-bb4d-482dab5e5b85 with status: completed
+2025-09-17 14:44:35,758 - __main__ - INFO - Recovered job 5e1b5cff-cba2-4480-84ba-e15d67c0e5ce with status: completed
+2025-09-17 14:44:35,758 - __main__ - INFO - Recovered job 9a02a945-7224-4c44-b3c3-c351fd83eed7 with status: processing
+2025-09-17 14:44:35,758 - __main__ - INFO - Recovered job b27a31d3-5bbd-45b6-baaf-7961269885f9 with status: completed
+2025-09-17 14:44:35,758 - __main__ - INFO - Recovered job 48702fda-4eb5-45a5-a562-2858933e70fa with status: completed
+2025-09-17 14:44:35,759 - __main__ - INFO - Recovered job 382ffe54-61c2-4f26-9194-6e11e1c90c78 with status: completed
+2025-09-17 14:44:35,759 - __main__ - INFO - Recovered job e225a67c-00ae-4b09-bfef-4d3a71f53f15 with status: completed
+2025-09-17 14:44:35,760 - __main__ - INFO - Recovered job 64bb2c6a-4b6c-43ad-ad37-70c37fe1e6c9 with status: completed
+2025-09-17 14:44:35,760 - __main__ - INFO - Recovered job 0f6781f8-83b3-43d5-9577-af2c01e1bd73 with status: completed
+2025-09-17 14:44:35,760 - __main__ - ERROR - Error loading job status for eff2ba5b-123a-4188-9f75-ef693249c35c: Expecting value: line 1 column 1 (char 0)
+2025-09-17 14:44:35,760 - __main__ - INFO - Recovered job 869960e2-f693-42d3-b97f-6ef75019afc9 with status: completed
+2025-09-17 14:44:35,760 - __main__ - INFO - Recovered job ff56d7c5-73fc-4f89-9c19-af2dce9afbbb with status: processing
+2025-09-17 14:44:35,760 - __main__ - INFO - Recovered job 7078aa63-a0df-4d11-9136-769c6a022519 with status: completed
+2025-09-17 14:44:35,768 - werkzeug - WARNING -  * Debugger is active!
+2025-09-17 14:44:35,768 - werkzeug - INFO -  * Debugger PIN: 247-983-067
+2025-09-17 14:45:07,874 - __main__ - INFO - Loading guidelines sets from XML file
+2025-09-17 14:45:07,875 - __main__ - INFO - Loaded guideline set 'compliance_set' with 6 guidelines
+2025-09-17 14:45:07,876 - __main__ - INFO - Loaded guideline set 'technical_set' with 6 guidelines
+2025-09-17 14:45:07,876 - __main__ - INFO - Loaded guideline set 'qa_set' with 5 guidelines
+2025-09-17 14:45:07,876 - __main__ - INFO - Loaded guideline set 'documentation_set' with 5 guidelines
+2025-09-17 14:45:07,876 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations' with 10 guidelines
+2025-09-17 14:45:07,876 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations_v2' with 2 guidelines
+2025-09-17 14:45:07,876 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations_v3' with 1 guidelines
+2025-09-17 14:45:07,876 - __main__ - INFO - Successfully loaded 7 guideline sets
+2025-09-17 14:45:07,883 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:07] "GET / HTTP/1.1" 200 -
+2025-09-17 14:45:21,972 - __main__ - INFO - Upload request - Files: 1, Guideline set: 'israeli_stairs_regulations_v3', Custom prompt: No
+2025-09-17 14:45:21,973 - __main__ - INFO - Loading guidelines sets from XML file
+2025-09-17 14:45:21,973 - __main__ - INFO - Loaded guideline set 'compliance_set' with 6 guidelines
+2025-09-17 14:45:21,973 - __main__ - INFO - Loaded guideline set 'technical_set' with 6 guidelines
+2025-09-17 14:45:21,973 - __main__ - INFO - Loaded guideline set 'qa_set' with 5 guidelines
+2025-09-17 14:45:21,973 - __main__ - INFO - Loaded guideline set 'documentation_set' with 5 guidelines
+2025-09-17 14:45:21,974 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations' with 10 guidelines
+2025-09-17 14:45:21,974 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations_v2' with 2 guidelines
+2025-09-17 14:45:21,974 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations_v3' with 1 guidelines
+2025-09-17 14:45:21,974 - __main__ - INFO - Successfully loaded 7 guideline sets
+2025-09-17 14:45:21,974 - __main__ - INFO - Initializing job 5b99884b-1532-458d-846e-9643ab6e2fb2 with 1 files and guideline set 'israeli_stairs_regulations_v3'
+2025-09-17 14:45:21,974 - __main__ - INFO - Successfully saved initial job status for 5b99884b-1532-458d-846e-9643ab6e2fb2
+2025-09-17 14:45:21,975 - __main__ - INFO - Starting async processing for job 5b99884b-1532-458d-846e-9643ab6e2fb2, files: 1, guideline_set: israeli_stairs_regulations_v3
+2025-09-17 14:45:21,975 - __main__ - INFO - Starting parallel guideline analysis for job 5b99884b-1532-458d-846e-9643ab6e2fb2
+2025-09-17 14:45:21,975 - __main__ - INFO - Starting parallel guidelines analysis for set: israeli_stairs_regulations_v3
+2025-09-17 14:45:21,980 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:21] "POST /upload HTTP/1.1" 200 -
+2025-09-17 14:45:22,039 - __main__ - INFO - Loading guidelines sets from XML file
+2025-09-17 14:45:22,040 - __main__ - INFO - Loaded guideline set 'compliance_set' with 6 guidelines
+2025-09-17 14:45:22,040 - __main__ - INFO - Loaded guideline set 'technical_set' with 6 guidelines
+2025-09-17 14:45:22,040 - __main__ - INFO - Loaded guideline set 'qa_set' with 5 guidelines
+2025-09-17 14:45:22,040 - __main__ - INFO - Loaded guideline set 'documentation_set' with 5 guidelines
+2025-09-17 14:45:22,040 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations' with 10 guidelines
+2025-09-17 14:45:22,040 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations_v2' with 2 guidelines
+2025-09-17 14:45:22,040 - __main__ - INFO - Loaded guideline set 'israeli_stairs_regulations_v3' with 1 guidelines
+2025-09-17 14:45:22,040 - __main__ - INFO - Successfully loaded 7 guideline sets
+2025-09-17 14:45:22,040 - __main__ - INFO - Loading prompt library from XML file
+2025-09-17 14:45:22,041 - __main__ - INFO - Successfully loaded prompt library
+2025-09-17 14:45:22,041 - __main__ - INFO - Found 1 guidelines to process in parallel (max_workers=3)
+2025-09-17 14:45:22,041 - __main__ - INFO - Uploading files to OpenAI...
+2025-09-17 14:45:22,326 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:22] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:23,274 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2025-09-17 14:45:23,276 - __main__ - INFO - Uploaded file: uploads/upload_1758120321_4377_0.pdf
+2025-09-17 14:45:23,276 - __main__ - INFO - Starting parallel processing with 3 workers
+2025-09-17 14:45:23,276 - __main__ - INFO - Starting analysis for guideline 1/1: גובה מזקף ראש מעל מדרגות
+2025-09-17 14:45:23,276 - __main__ - INFO - Waiting 10 seconds before processing guideline 1
+2025-09-17 14:45:23,277 - __main__ - INFO - Submitted guideline 1/1: גובה מזקף ראש מעל מדרגות
+2025-09-17 14:45:25,526 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:25] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:28,726 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:28] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:31,920 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:31] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:33,299 - __main__ - INFO - Sending API request for guideline: גובה מזקף ראש מעל מדרגות
+2025-09-17 14:45:35,147 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:35] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:38,277 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:38] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:41,367 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:41] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:44,577 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:44] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:47,674 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:47] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:50,783 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:50] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:53,987 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:53] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:45:57,103 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:45:57] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:00,208 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:00] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:03,308 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:03] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:06,408 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:06] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:09,553 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:09] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:12,656 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:12] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:15,762 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:15] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:18,969 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:18] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:22,073 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:22] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:25,163 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:25] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:28,259 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:28] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:31,358 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:31] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:34,457 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:34] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:37,561 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:37] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:40,690 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:40] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:43,805 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:43] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:46,900 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:46] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:50,120 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:50] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:53,228 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:53] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:56,336 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:56] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:46:59,437 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:46:59] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:02,544 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:02] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:05,731 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:05] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:08,837 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:08] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:11,975 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:11] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:15,182 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:15] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:18,278 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:18] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:21,374 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:21] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:24,482 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:24] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:27,586 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:27] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:30,706 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:30] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:33,799 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:33] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:36,904 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:36] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:40,015 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:40] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:43,124 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:43] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:46,325 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:46] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:49,424 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:49] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:52,527 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:52] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:55,622 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:55] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:47:58,728 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:47:58] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:01,825 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:01] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:04,922 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:04] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:08,113 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:08] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:11,205 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:11] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:14,334 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:14] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:17,449 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:17] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:20,554 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:20] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:23,660 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:23] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:26,755 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:26] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:29,853 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:29] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:33,103 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:33] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:36,196 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:36] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:39,292 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:39] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:42,393 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:42] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:45,516 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:45] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:48,619 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:48] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:51,721 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:51] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:54,817 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:54] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:48:57,913 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:48:57] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:01,004 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:01] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:04,103 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:04] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:07,208 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:07] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:10,305 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:10] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:13,534 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:13] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:16,677 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:16] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:19,849 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:19] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:22,270 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-17 14:49:22,311 - __main__ - INFO - Logged prompt/response for guideline: גובה מזקף ראש מעל מדרגות in job: 5b99884b-1532-458d-846e-9643ab6e2fb2
+2025-09-17 14:49:22,311 - __main__ - INFO - Real API response parsed: כן, result_value: 1, status: תקין
+2025-09-17 14:49:22,312 - __main__ - INFO - Successfully completed analysis for guideline: גובה מזקף ראש מעל מדרגות - Result: כן
+2025-09-17 14:49:22,312 - __main__ - INFO - Completed guideline: גובה מזקף ראש מעל מדרגות - Status: כן
+2025-09-17 14:49:22,312 - __main__ - INFO - Cleaning up uploaded files...
+2025-09-17 14:49:22,833 - httpx - INFO - HTTP Request: DELETE https://api.openai.com/v1/files/file-X99Ww3Fh8jsgt5DoXGGLf5 "HTTP/1.1 200 OK"
+2025-09-17 14:49:22,834 - __main__ - INFO - Successfully completed parallel analysis of 1 guidelines
+2025-09-17 14:49:22,835 - __main__ - INFO - Cleaning up uploaded files for job 5b99884b-1532-458d-846e-9643ab6e2fb2
+2025-09-17 14:49:22,835 - __main__ - INFO - Successfully completed processing for job 5b99884b-1532-458d-846e-9643ab6e2fb2
+2025-09-17 14:49:22,944 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:22] "GET /api/status/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
+2025-09-17 14:49:24,574 - werkzeug - INFO - 127.0.0.1 - - [17/Sep/2025 14:49:24] "GET /result/5b99884b-1532-458d-846e-9643ab6e2fb2 HTTP/1.1" 200 -
