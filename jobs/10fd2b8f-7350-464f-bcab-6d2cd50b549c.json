@@ -1,0 +1,35 @@
+{
+  "status": "processing",
+  "message": "Processing 10 guidelines in parallel...",
+  "created_at": 1758035160.5689328,
+  "guideline_set_id": "israeli_stairs_regulations",
+  "total_guidelines": 10,
+  "completed_guidelines": 0,
+  "current_guidelines": {
+    "stairs_width_compliance": {
+      "status": "processing",
+      "title": "\u05e8\u05d5\u05d7\u05d1 \u05e9\u05dc \u05de\u05d3\u05e8\u05d2\u05d5\u05ea",
+      "index": 1,
+      "total": 10,
+      "started_at": "2025-09-16T15:06:01.533703",
+      "last_heartbeat": "2025-09-16T15:06:01.566879"
+    },
+    "headroom_height_compliance": {
+      "status": "processing",
+      "title": "\u05d2\u05d5\u05d1\u05d4 \u05de\u05d6\u05e7\u05e3 \u05e8\u05d0\u05e9 \u05de\u05e2\u05dc \u05de\u05d3\u05e8\u05d2\u05d5\u05ea",
+      "index": 2,
+      "total": 10,
+      "started_at": "2025-09-16T15:06:11.535462",
+      "last_heartbeat": "2025-09-16T15:06:11.583678"
+    },
+    "step_rise_tread_dimensions": {
+      "status": "processing",
+      "title": "\u05de\u05d9\u05d3\u05d5\u05ea \u05e8\u05d5\u05dd \u05d5\u05e9\u05dc\u05d7 \u05de\u05d3\u05e8\u05d2\u05d4",
+      "index": 3,
+      "total": 10,
+      "started_at": "2025-09-16T15:06:11.536324",
+      "last_heartbeat": "2025-09-16T15:06:11.583611"
+    }
+  },
+  "processing_started_at": "2025-09-16T15:06:01.532893"
+}

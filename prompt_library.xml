@@ -17,12 +17,12 @@
 
 
     <!-- Guidelines Sets -->
-    
+
         <set  id="israeli_stairs_regulations" name="תקנות תכנון ובניה - מדרגות" >
             <set_prompt>
-                
+
             </set_prompt>
 
         </set>
-    </guidelines_sets>
+
 </prompt_library>

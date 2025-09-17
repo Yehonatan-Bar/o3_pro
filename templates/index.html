@@ -62,6 +62,24 @@
         .file-item {
             padding: 2px 0;
         }
+        .guideline-selection {
+            width: 100%;
+            margin: 20px 0;
+        }
+        .guideline-selection label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .guideline-selection select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+            background-color: white;
+        }
         .prompt-input {
             width: 100%;
             margin: 20px 0;
@@ -128,7 +146,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>🤖 File Analyzer with o3-pro</h1>
+        <div style="background: #f8f9fa; margin: -40px -40px 30px -40px; padding: 20px 40px; border-radius: 12px 12px 0 0; border-bottom: 2px solid #dee2e6;">
+            <h1 style="margin: 0; text-align: center;">🤖 File Analyzer with o3-pro</h1>
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                <a href="/" style="background: #007bff; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block;">🏠 Analyzer</a>
+                <a href="/logs" style="background: white; color: #007bff; text-decoration: none; padding: 10px 20px; border: 2px solid #007bff; border-radius: 5px; font-weight: bold; display: inline-block;">📋 Prompt/Response Logs</a>
+            </div>
+        </div>
 
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -148,9 +172,19 @@
                     <div class="file-info" id="fileInfo"></div>
                 </div>
 
+                <div class="guideline-selection">
+                    <label for="guideline_set"><strong>Guidelines Set:</strong></label>
+                    <select name="guideline_set" id="guideline_set" required>
+                        <option value="">Select a guidelines set...</option>
+                        {% for set_id, set_data in guidelines_sets.items() %}
+                        <option value="{{ set_id }}">{{ set_data.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
                 <div class="prompt-input">
                     <label for="prompt"><strong>Custom Analysis Prompt (optional):</strong></label>
-                    <textarea name="prompt" id="prompt" placeholder="Enter your custom prompt here, or leave blank for default analysis (summary with three key takeaways)"></textarea>
+                    <textarea name="prompt" id="prompt" placeholder="Enter your custom prompt here, or leave blank for guideline-based analysis"></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn" id="submitBtn">🔍 Analyze Files</button>
@@ -176,6 +210,8 @@
 
         fileInput.addEventListener('change', function() {
             const files = Array.from(this.files);
+            console.log('Files selected:', files.length);
+
             if (files.length === 0) {
                 fileInfo.classList.remove('show');
                 submitBtn.textContent = '🔍 Analyze Files';
@@ -207,7 +243,19 @@
             submitBtn.textContent = `🔍 Analyze ${pdfFiles.length} File${pdfFiles.length === 1 ? '' : 's'}`;
         });
 
-        document.getElementById('uploadForm').addEventListener('submit', function() {
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            console.log('Form submitted');
+
+            const guidelineSet = document.getElementById('guideline_set').value;
+            const customPrompt = document.getElementById('prompt').value;
+            const selectedFiles = document.getElementById('files').files;
+
+            console.log('Form data:', {
+                guidelineSet: guidelineSet,
+                customPrompt: customPrompt ? 'Custom prompt provided' : 'No custom prompt',
+                fileCount: selectedFiles.length
+            });
+
             document.querySelector('.upload-form').style.display = 'none';
             document.getElementById('loading').style.display = 'block';
         });
