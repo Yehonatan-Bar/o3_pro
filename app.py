@@ -454,20 +454,44 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
                         else:
                             compliance_status = "Unknown"
 
-                        logger.info(f"Mock response parsed: {compliance_status}")
+                        logger.info(f"Mock response parsed: {compliance_status}, result_value: {result_value}")
                 except Exception as e:
                     logger.warning(f"Could not parse mock JSON: {e}")
-                    if "כן" in result_text:
-                        compliance_status = "כן"
-                    elif "לא" in result_text:
-                        compliance_status = "לא"
+                    # Fallback: try to extract explanation from JSON manually
+                    try:
+                        explanation_match = re.search(r'"explanation":\s*"([^"]*)"', result_text)
+                        if explanation_match:
+                            explanation = explanation_match.group(1)
+                        result_match = re.search(r'"result":\s*(-?\d+)', result_text)
+                        if result_match:
+                            result_value = int(result_match.group(1))
+                            if result_value == 1:
+                                compliance_status = "כן"
+                            elif result_value == 0:
+                                compliance_status = "לא"
+                            else:
+                                compliance_status = "Unknown"
+                    except Exception as fallback_error:
+                        logger.warning(f"Fallback parsing also failed: {fallback_error}")
+                        # Last resort: search for compliance keywords in the text
+                        if "כן" in result_text:
+                            compliance_status = "כן"
+                        elif "לא" in result_text:
+                            compliance_status = "לא"
+                        # If no explanation found, try to extract it from result_text
+                        if not explanation:
+                            explanation = result_text.replace('{', '').replace('}', '').replace('"', '').strip()
+
+                # Ensure we always have explanation text and never show JSON
+                if not explanation:
+                    explanation = "אירעה שגיאה בעיבוד התגובה"
 
                 # Return mock result
                 return {
                     'guideline_id': guideline['id'],
                     'title': guideline['title'],
                     'compliance_status': compliance_status,
-                    'analysis': explanation if explanation else result_text,
+                    'analysis': explanation,  # Always use explanation, never full JSON
                     'explanation': explanation,
                     'regulation_text': guideline['regulation_text'],
                     'processing_time': time.time(),
@@ -597,16 +621,54 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
 
             # Extract the compliance answer (כן/לא/Unknown)
             compliance_status = "Unknown"
-            if "כן" in result_text:
-                compliance_status = "כן"
-            elif "לא" in result_text:
-                compliance_status = "לא"
+            explanation = result_text  # Default to full text
+
+            # Try to parse JSON response first (same logic as mock processing)
+            try:
+                import re
+                json_start = result_text.find('{')
+                json_end = result_text.rfind('}') + 1
+
+                if json_start >= 0 and json_end > json_start:
+                    json_str = result_text[json_start:json_end]
+                    json_obj = json.loads(json_str)
+                    result_value = json_obj.get('result', -1)
+                    extracted_explanation = json_obj.get('explanation', '')
+
+                    if result_value == 1:
+                        compliance_status = "כן"
+                    elif result_value == 0:
+                        compliance_status = "לא"
+                    else:
+                        compliance_status = "Unknown"
+
+                    # Use extracted explanation if available
+                    if extracted_explanation:
+                        explanation = extracted_explanation
+
+                    logger.info(f"Real API response parsed: {compliance_status}, result_value: {result_value}")
+                else:
+                    # Fallback to text-based search
+                    if "כן" in result_text:
+                        compliance_status = "כן"
+                    elif "לא" in result_text:
+                        compliance_status = "לא"
+                    logger.info(f"Real API response using text search: {compliance_status}")
+
+            except Exception as e:
+                logger.warning(f"Could not parse real API JSON: {e}")
+                # Fallback to original text-based logic
+                if "כן" in result_text:
+                    compliance_status = "כן"
+                elif "לא" in result_text:
+                    compliance_status = "לא"
+                logger.info(f"Real API response fallback: {compliance_status}")
 
             guideline_result = {
                 'guideline_id': guideline['id'],
                 'title': guideline['title'],
                 'compliance_status': compliance_status,
-                'analysis': result_text,
+                'analysis': explanation,  # Use explanation instead of full result_text
                 'regulation_text': guideline['regulation_text'],
                 'processing_time': time.time(),
                 'completed_at': datetime.now().isoformat()
