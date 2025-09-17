@@ -13,6 +13,14 @@ from openai import OpenAI
 from flask import Flask, request, render_template, flash, redirect, url_for, jsonify
 from werkzeug.utils import secure_filename
 
+# Import mock system
+try:
+    from simple_mock import get_mock_response
+    MOCK_AVAILABLE = True
+except ImportError:
+    MOCK_AVAILABLE = False
+    def get_mock_response(title): return None
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -31,9 +39,17 @@ UPLOAD_FOLDER = 'uploads'
 JOBS_FOLDER = 'jobs'
 ALLOWED_EXTENSIONS = {'pdf'}  # o3-pro only accepts PDF files
 
+# Mock mode configuration
+MOCK_MODE = os.getenv('MOCK_MODE', 'false').lower() == 'true'
+
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(JOBS_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+if MOCK_MODE:
+    logger.info('🎭 MOCK MODE ENABLED - Using cached responses instead of API calls')
+else:
+    logger.info('🌐 LIVE MODE - Making real API calls')
 
 # In-memory storage for job status with persistent backup
 job_status = {}
@@ -397,7 +413,68 @@ def analyze_single_guideline(uploaded_files, guideline, prompt_library, guidelin
     try:
         logger.info(f"Starting analysis for guideline {guideline_index + 1}/{total_guidelines}: {guideline_title}")
 
-        # Add delay before each API call
+        # Check for mock response first
+        if MOCK_MODE and MOCK_AVAILABLE:
+            mock_response = get_mock_response(guideline_title)
+            if mock_response:
+                logger.info(f"🎭 Using mock response for: {guideline_title}")
+                result_text = mock_response
+
+                # Skip API call and go directly to result processing
+                # Log the mock prompt and response
+                combined_prompt = "Mock prompt for " + guideline_title
+                log_prompt_response(
+                    job_id=job_id,
+                    guideline_title=guideline_title,
+                    guideline_id=guideline_id,
+                    prompt=combined_prompt,
+                    response=result_text
+                )
+
+                # Process the mock response (continue to result processing)
+                # Extract JSON from response and map to compliance status
+                compliance_status = "Unknown"
+                explanation = ""
+
+                try:
+                    import re
+                    json_start = result_text.find('{')
+                    json_end = result_text.rfind('}') + 1
+
+                    if json_start >= 0 and json_end > json_start:
+                        json_str = result_text[json_start:json_end]
+                        json_obj = json.loads(json_str)
+                        result_value = json_obj.get('result', -1)
+                        explanation = json_obj.get('explanation', '')
+
+                        if result_value == 1:
+                            compliance_status = "כן"
+                        elif result_value == 0:
+                            compliance_status = "לא"
+                        else:
+                            compliance_status = "Unknown"
+
+                        logger.info(f"Mock response parsed: {compliance_status}")
+                except Exception as e:
+                    logger.warning(f"Could not parse mock JSON: {e}")
+                    if "כן" in result_text:
+                        compliance_status = "כן"
+                    elif "לא" in result_text:
+                        compliance_status = "לא"
+
+                # Return mock result
+                return {
+                    'guideline_id': guideline['id'],
+                    'title': guideline['title'],
+                    'compliance_status': compliance_status,
+                    'analysis': explanation if explanation else result_text,
+                    'explanation': explanation,
+                    'regulation_text': guideline['regulation_text'],
+                    'processing_time': time.time(),
+                    'completed_at': datetime.now().isoformat()
+                }
+
+        # Real API mode - add delay before each API call
         logger.info(f"Waiting {delay_seconds} seconds before processing guideline {guideline_index + 1}")
         time.sleep(delay_seconds)
 

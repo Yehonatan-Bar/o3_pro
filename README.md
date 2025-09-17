@@ -27,6 +27,7 @@ A comprehensive Flask-based web application that enables analysis of multiple PD
 - **File preview** - shows selected files with sizes before upload
 
 ### 📋 Guidelines-Based Compliance Checking
+- **Advanced JSON-Based Analysis** - Model returns structured JSON with numeric results and detailed explanations
 - **Regulatory Compliance Analysis** - systematic verification against predefined guidelines
 - **Multiple Guidelines Sets** - supports various compliance frameworks:
   - **Compliance Guidelines** - GDPR, data retention, security measures
@@ -34,7 +35,13 @@ A comprehensive Flask-based web application that enables analysis of multiple PD
   - **Quality Assurance Guidelines** - review processes, quality metrics, testing
   - **Documentation Guidelines** - user manuals, installation guides, troubleshooting
   - **Israeli Stairs Building Regulations** - comprehensive building code compliance (Hebrew)
-- **Individual Guideline Assessment** - each guideline evaluated separately with כן/לא/Unknown responses
+- **Structured Response Format**:
+  - **Result codes**: 1 (compliant), 0 (non-compliant), -1 (cannot determine)
+  - **Detailed explanations** with exact location references (page, section, BBox coordinates)
+  - **Visual descriptions** of where information was found in documents
+  - **Brief quotes** from source material (up to 15 words)
+- **Individual Guideline Assessment** - each guideline evaluated with כן/לא/Unknown status
+- **Interactive Explanations** - Click info icon (i) to reveal detailed reasoning
 - **Progress Tracking** - real-time updates showing current guideline being analyzed
 - **Compliance Reporting** - detailed summary with statistics and individual results
 
@@ -45,7 +52,9 @@ A comprehensive Flask-based web application that enables analysis of multiple PD
 - **Custom prompt support** - specify your own analysis instructions for traditional mode
 - **Advanced Results Display**:
   - **Summary Reports** with compliance statistics and copy functionality
-  - **Individual Guideline Results** with color-coded compliance status
+  - **Individual Guideline Results** with color-coded compliance status (green/red/yellow)
+  - **Interactive Explanations** - Click info icon (i) next to status to view detailed reasoning
+  - **Expandable Explanation Boxes** - Blue-tinted boxes showing location references and quotes
   - **Expandable Regulation Text** for reference and verification
   - **Copy-to-clipboard** functionality for both summaries and individual analyses
 - **File information display** showing processed files and analysis details
@@ -176,7 +185,8 @@ curl -X POST http://localhost:9000/api/analyze \
         "guideline_id": "stairs_width_compliance",
         "title": "רוחב של מדרגות",
         "compliance_status": "כן",
-        "analysis": "המדרגות עומדות בדרישות הרוחב...",
+        "analysis": "{\"result\": 1, \"explanation\": \"ההנחיה דורשת רוחב ≥1.10m. בקובץ 'specifications.pdf', עמוד 3, סעיף 4.2 'מדרגות', מופיע: 'רוחב נטו 1.15m'. תיאור מיקום: באמצע העמוד, טבלת מידות, שורה שלישית.\"}",
+        "explanation": "ההנחיה דורשת רוחב ≥1.10m. בקובץ 'specifications.pdf', עמוד 3, סעיף 4.2 'מדרגות', מופיע: 'רוחב נטו 1.15m'. תיאור מיקום: באמצע העמוד, טבלת מידות, שורה שלישית.",
         "regulation_text": "רוחבן של מדרגות בבניין יהיה 1.10 מטרים לפחות..."
       }
     ],
@@ -260,7 +270,12 @@ o3_pro/
 - **XML Configuration Loading** - dynamic parsing of guidelines sets and prompt templates
 - **Parallel Processing Loop** - processes multiple guidelines simultaneously with controlled concurrency
 - **Prompt Construction** - combines system prompts, general analysis instructions, regulation text, and uploaded documents
-- **Compliance Detection** - extracts כן/לא/Unknown responses from model output
+- **JSON Response Processing**:
+  - **Robust JSON extraction** - handles both clean JSON and embedded JSON in text
+  - **Fallback mechanisms** - reverts to text-based detection if JSON parsing fails
+  - **Result mapping** - converts numeric codes (1/0/-1) to Hebrew status (כן/לא/Unknown)
+  - **Explanation extraction** - captures detailed reasoning with location references
+- **Compliance Detection** - extracts structured responses with explanations from model output
 - **Report Generation** - creates comprehensive Hebrew summary reports with statistics
 - **Real-time Progress Broadcasting** - updates job status with individual guideline completion status
 - **Individual Error Handling** - isolates failures to specific guidelines without stopping others

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            direction: rtl;
         }
         h1 {
             color: #333;
@@ -28,7 +29,9 @@
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 30px;
-            border-left: 4px solid #007bff;
+            border-right: 4px solid #007bff;
+            direction: rtl;
+            text-align: right;
         }
         .file-info h3 {
             margin-top: 0;
@@ -108,7 +111,9 @@
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 30px;
-            border-left: 4px solid #4caf50;
+            border-right: 4px solid #4caf50;
+            direction: rtl;
+            text-align: right;
         }
 
         .summary-content {
@@ -116,10 +121,13 @@
             line-height: 1.6;
             font-size: 14px;
             margin-top: 10px;
+            direction: rtl;
+            text-align: right;
         }
 
         .individual-guidelines {
             margin-top: 30px;
+            direction: rtl;
         }
 
         .guideline-item {
@@ -128,21 +136,24 @@
             border-radius: 8px;
             margin-bottom: 20px;
             overflow: hidden;
+            direction: rtl;
         }
 
         .guideline-header {
             background: #e9ecef;
             padding: 15px 20px;
             display: flex;
-            justify-content: between;
+            justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #dee2e6;
+            direction: rtl;
         }
 
         .guideline-header h5 {
             margin: 0;
             flex: 1;
             color: #495057;
+            text-align: right;
         }
 
         .compliance-status {
@@ -150,7 +161,7 @@
             border-radius: 20px;
             font-weight: bold;
             font-size: 12px;
-            margin-left: 15px;
+            margin-right: 15px;
         }
 
         .status-כן {
@@ -173,17 +184,26 @@
 
         .guideline-content {
             padding: 20px;
+            direction: rtl;
+        }
+
+        .analysis-text {
+            direction: rtl;
+            text-align: right;
         }
 
         .analysis-text p {
             margin: 10px 0;
             line-height: 1.6;
+            direction: rtl;
+            text-align: right;
         }
 
         .regulation-text {
             margin-top: 15px;
             border: 1px solid #dee2e6;
             border-radius: 4px;
+            direction: rtl;
         }
 
         .regulation-text summary {
@@ -203,44 +223,46 @@
             line-height: 1.6;
             font-size: 14px;
             color: #495057;
+            direction: rtl;
+            text-align: right;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div style="background: #f8f9fa; margin: -40px -40px 30px -40px; padding: 20px 40px; border-radius: 12px 12px 0 0; border-bottom: 2px solid #dee2e6;">
-            <h1 style="margin: 0; text-align: center;">📊 Analysis Results</h1>
+            <h1 style="margin: 0; text-align: center;">📊 תוצאות ניתוח</h1>
             <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
-                <a href="/" style="background: white; color: #28a745; text-decoration: none; padding: 10px 20px; border: 2px solid #28a745; border-radius: 5px; font-weight: bold; display: inline-block;">🏠 New Analysis</a>
-                <a href="/logs" style="background: #007bff; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block;">📋 Prompt/Response Logs</a>
+                <a href="/" style="background: white; color: #28a745; text-decoration: none; padding: 10px 20px; border: 2px solid #28a745; border-radius: 5px; font-weight: bold; display: inline-block;">🏠 ניתוח חדש</a>
+                <a href="/logs" style="background: #007bff; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block;">📋 יומני פרומפטים/תגובות</a>
             </div>
         </div>
 
         <div class="file-info">
-            <h3>📁 File Information</h3>
+            <h3>📁 מידע על הקבצים</h3>
             {% if file_count > 1 %}
-                <p><strong>Files Analyzed:</strong> {{ file_count }} PDF files</p>
+                <p><strong>קבצים שנותחו:</strong> {{ file_count }} קבצי PDF</p>
                 <div class="file-list">
                     {% for filename in filenames %}
                         <div class="file-item">📄 {{ filename }}</div>
                     {% endfor %}
                 </div>
             {% else %}
-                <p><strong>Filename:</strong> {{ filenames[0] if filenames else 'Unknown file' }}</p>
+                <p><strong>שם קובץ:</strong> {{ filenames[0] if filenames else 'קובץ לא ידוע' }}</p>
             {% endif %}
         </div>
 
         {% if analysis_type == 'guidelines' %}
             <div class="guideline-results">
-                <h3>📋 Guidelines Analysis Results</h3>
+                <h3>📋 תוצאות ניתוח הנחיות</h3>
                 <div class="guideline-summary">
-                    <h4>📊 Summary Report</h4>
-                    <button class="copy-btn" onclick="copyToClipboard('summaryText')">📋 Copy Summary</button>
+                    <h4>📊 דוח סיכום</h4>
+                    <button class="copy-btn" onclick="copyToClipboard('summaryText')">📋 העתק סיכום</button>
                     <div class="summary-content" id="summaryText">{{ result.summary }}</div>
                 </div>
 
                 <div class="individual-guidelines">
-                    <h4>📝 Individual Guideline Results</h4>
+                    <h4>📝 תוצאות הנחיות בודדות</h4>
                     {% for guideline_result in result.guideline_results %}
                         <div class="guideline-item">
                             <div class="guideline-header">
@@ -251,12 +273,12 @@
                             </div>
                             <div class="guideline-content">
                                 <div class="analysis-text">
-                                    <strong>Analysis:</strong>
+                                    <strong>ניתוח:</strong>
                                     <p>{{ guideline_result.analysis }}</p>
                                 </div>
                                 {% if guideline_result.regulation_text %}
                                     <details class="regulation-text">
-                                        <summary>Show Regulation Text</summary>
+                                        <summary>הצג טקסט הנחיה</summary>
                                         <div class="regulation-content">{{ guideline_result.regulation_text }}</div>
                                     </details>
                                 {% endif %}
@@ -279,7 +301,7 @@
             </div>
         {% endif %}
 
-        <a href="{{ url_for('index') }}" class="back-btn">⬅️ Analyze More Files</a>
+        <a href="{{ url_for('index') }}" class="back-btn">⬅️ נתח קבצים נוספים</a>
     </div>
 
     <script>

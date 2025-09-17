@@ -1,0 +1,46 @@
+{
+  "status": "completed",
+  "message": "Completed 1/1 guidelines",
+  "created_at": 1758096392.9079545,
+  "guideline_set_id": "israeli_stairs_regulations_v3",
+  "filenames": [
+    "\u05d7\u05ea\u05da \u05d4\u05de\u05d3\u05e8\u05d2\u05d5\u05ea.pdf"
+  ],
+  "file_count": 1,
+  "total_guidelines": 1,
+  "completed_guidelines": 1,
+  "current_guidelines": {
+    "headroom_height_compliance": {
+      "status": "completed",
+      "title": "\u05d2\u05d5\u05d1\u05d4 \u05de\u05d6\u05e7\u05e3 \u05e8\u05d0\u05e9 \u05de\u05e2\u05dc \u05de\u05d3\u05e8\u05d2\u05d5\u05ea",
+      "index": 1,
+      "total": 1,
+      "started_at": "2025-09-17T08:06:44.033764",
+      "last_heartbeat": "2025-09-17T08:08:44.084146",
+      "result": "\u05db\u05df",
+      "completed_at": "2025-09-17T08:08:52.842112",
+      "analysis": "\u05db\u05df",
+      "explanation": ""
+    }
+  },
+  "processing_started_at": "2025-09-17T08:06:34.032402",
+  "last_update": "2025-09-17T08:08:52.842901",
+  "result": {
+    "guideline_set_name": "_v3 \u05ea\u05e7\u05e0\u05d5\u05ea \u05ea\u05db\u05e0\u05d5\u05df \u05d5\u05d1\u05e0\u05d9\u05d4 - \u05de\u05d3\u05e8\u05d2\u05d5\u05ea",
+    "guideline_results": [
+      {
+        "guideline_id": "headroom_height_compliance",
+        "title": "\u05d2\u05d5\u05d1\u05d4 \u05de\u05d6\u05e7\u05e3 \u05e8\u05d0\u05e9 \u05de\u05e2\u05dc \u05de\u05d3\u05e8\u05d2\u05d5\u05ea",
+        "compliance_status": "\u05db\u05df",
+        "analysis": "\u05db\u05df",
+        "explanation": "",
+        "regulation_text": "\u05d2\u05d5\u05d1\u05d4 \u05de\u05d6\u05e7\u05e3 \u05e8\u05d0\u05e9 \u05de\u05e2\u05dc \u05de\u05d3\u05e8\u05d2\u05d5\u05ea \u05ea\u05e7' (\u05de\u05e1' 3) \u05ea\u05e9\u05e1\"\u05d72008-\n3.2.2.4 \u05d2\u05d5\u05d1\u05d4 \u05de\u05d6\u05e7\u05e3 \u05e8\u05d0\u05e9 \u05de\u05e2\u05dc \u05de\u05d3\u05e8\u05d2\u05d5\u05ea \u05d9\u05d4\u05d9\u05d4 2.10 \u05de\u05d8\u05e8\u05d9\u05dd \u05dc\u05e4\u05d7\u05d5\u05ea \u05db\u05d0\u05e9\u05e8 \u05d4\u05d5\u05d0 \u05e0\u05de\u05d3\u05d3 \u05d0\u05e0\u05db\u05d9\u05ea \u05de\u05e2\u05dc \u05de\u05d9\u05e9\u05d5\u05e8\n\u05d4\u05de\u05e7\u05d1\u05d9\u05dc \u05dc\u05de\u05e9\u05d9\u05e7 \u05d0\u05e4\u05d9 \u05d4\u05de\u05d3\u05e8\u05d2\u05d5\u05ea ",
+        "processing_time": 1758096532.842099,
+        "completed_at": "2025-09-17T08:08:52.842100"
+      }
+    ],
+    "summary": "\n# \u05e1\u05d9\u05db\u05d5\u05dd \u05d3\u05d5\u05d7 \u05e0\u05d9\u05ea\u05d5\u05d7 \u05d4\u05e0\u05d7\u05d9\u05d5\u05ea\n\n## \u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05db\u05dc\u05dc\u05d9\u05d5\u05ea:\n- \u05e1\u05da \u05d4\u05db\u05dc \u05d4\u05e0\u05d7\u05d9\u05d5\u05ea \u05e9\u05e0\u05d1\u05d3\u05e7\u05d5: 1\n- \u05e2\u05de\u05d9\u05d3\u05d4 \u05d1\u05d3\u05e8\u05d9\u05e9\u05d5\u05ea (\u05db\u05df): 1\n- \u05d0\u05d9 \u05e2\u05de\u05d9\u05d3\u05d4 \u05d1\u05d3\u05e8\u05d9\u05e9\u05d5\u05ea (\u05dc\u05d0): 0\n- \u05dc\u05d0 \u05d1\u05e8\u05d5\u05e8/\u05d0\u05d9\u05df \u05de\u05d9\u05d3\u05e2 (Unknown): 0\n\n## \u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05de\u05e4\u05d5\u05e8\u05d8\u05d5\u05ea:\n\n### \u05d2\u05d5\u05d1\u05d4 \u05de\u05d6\u05e7\u05e3 \u05e8\u05d0\u05e9 \u05de\u05e2\u05dc \u05de\u05d3\u05e8\u05d2\u05d5\u05ea\n**\u05ea\u05d5\u05e6\u05d0\u05d4:** \u05db\u05df\n**\u05e4\u05d9\u05e8\u05d5\u05d8:** \u05db\u05df\n\n---\n"
+  },
+  "analysis_type": "guidelines",
+  "completed_at": "2025-09-17T08:08:53.193419"
+}

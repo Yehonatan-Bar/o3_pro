@@ -193,5 +193,21 @@
         </set>
 
 
+
+        <!-- Israeli Stairs Building Regulations Set -->
+        <set id="israeli_stairs_regulations_v3" name="_v3 תקנות תכנון ובניה - מדרגות" description=" v3_הנחיות לעמידה בתקנות הבניה הישראליות למדרגות, חדרי מדרגות ומדרגות נעות">
+            <guidelines>
+               
+
+                <guideline id="headroom_height_compliance" title="גובה מזקף ראש מעל מדרגות">
+                    <regulation_text>גובה מזקף ראש מעל מדרגות תק' (מס' 3) תשס"ח2008-
+3.2.2.4 גובה מזקף ראש מעל מדרגות יהיה 2.10 מטרים לפחות כאשר הוא נמדד אנכית מעל מישור
+המקביל למשיק אפי המדרגות </regulation_text>
+                </guideline>
+
+            </guidelines>
+        </set>
+
+
     </sets>
 </guidelines_structure>
